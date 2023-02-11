@@ -21,7 +21,7 @@ Launch control panels are treated as a normal peripheral. To use, place a comput
 lua> mc = peripheral.wrap("right") -- Wraps a control panel on the right side
 ```
 ```
-lua> mc = peripheral.find("missilecontroller") -- Looks for an attached control panel
+lua> mc = peripheral.find("missilecontrol") -- Looks for an attached control panel
 ```
 Higher tier control panels have more available methods, and inherit all methods from lower tiers.
 ## T1

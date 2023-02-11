@@ -1,5 +1,6 @@
 package icbm.classic;
 
+import dan200.computercraft.api.ComputerCraftAPI;
 import icbm.classic.api.EnumTier;
 import icbm.classic.api.ICBMClassicAPI;
 import icbm.classic.api.reg.events.ExplosiveContentRegistryEvent;
@@ -11,6 +12,7 @@ import icbm.classic.config.ConfigItems;
 import icbm.classic.config.ConfigThread;
 import icbm.classic.content.blast.caps.CapabilityBlast;
 import icbm.classic.content.blast.caps.CapabilityBlastVelocity;
+import icbm.classic.content.blocks.launcher.screen.ScreenPeripheralProvider;
 import icbm.classic.content.entity.missile.CapabilityMissile;
 import icbm.classic.content.items.behavior.BombCartDispenseBehavior;
 import icbm.classic.content.items.behavior.GrenadeDispenseBehavior;
@@ -308,6 +310,9 @@ public final class ICBMClassic
         PoisonToxin.INSTANCE = MobEffects.POISON;//new PoisonToxin(true, 5149489, "toxin");
         PoisonContagion.INSTANCE = MobEffects.POISON;//new PoisonContagion(false, 5149489, "virus");
         PoisonFrostBite.INSTANCE = MobEffects.POISON;//new PoisonFrostBite(false, 5149489, "frostBite");
+
+        /** CC */
+        ComputerCraftAPI.registerPeripheralProvider(new ScreenPeripheralProvider());
 
         /** Dispenser Handler */
         if (ItemReg.itemGrenade != null)

@@ -35,6 +35,7 @@ dependencies {
 
     //Mods
     implementation files('libs/industrialcraft-2-2.8.170-ex112-api.jar')
+    implementation files('libs/cc-tweaked-1.12.2-1.83.0.jar')
 
     //Junit 5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
